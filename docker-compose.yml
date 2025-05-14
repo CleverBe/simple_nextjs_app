@@ -1,0 +1,15 @@
+services:
+  postgres:
+    image: postgres:latest
+    container_name: simpleApp
+    ports:
+      - '5432:5432'
+    volumes:
+      - simpleAppVol:/var/lib/postgresql/data
+    env_file:
+      - ./.env
+
+volumes:
+  simpleAppVol:
+
+
